@@ -1,89 +1,135 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Q3 Seatwork 2</title>
-<style>
-    body {
-      background-image: url('https://preview.redd.it/d3s4vwu1n0u11.png?width=1080&crop=smart&auto=webp&s=60dc4e1e01658735d6c8e6a47da271b0d32d0288');
-      background-repeat: no-repeat;
-      background-size: cover;
-      text-align: center;
-    }
-.nav{
-    background-color: rgb(99, 101, 208);
-}
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <title>Q3 Seatwork 2</title>
+  <style>
+      body {
+        background-image: url('https://preview.redd.it/d3s4vwu1n0u11.png?width=1080&crop=smart&auto=webp&s=60dc4e1e01658735d6c8e6a47da271b0d32d0288');
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+      }
+  .nav{
+      background-color: rgb(99, 101, 208);
+  }
 
-    .container{
-        background-color: rgba(250, 250, 250, 0.644);
-    }
-</style>
-    
-</head>
-<body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid text-center" id="container1">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="mynavbar">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
-          <a class="nav-link">Shop</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Locate</a>
-        </li>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="text" placeholder="Search">
-        <button class="btn btn-primary" type="button">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-      <br>
-<div class="container-fluid text-center text-light" id="T1">
-    <h2>Want a gaming Laptop? 🎮</h2>
-    <h3>Enter your budget and let's find the right one for you!</h3>
-</div>
-<br>  
-
-    <div class="col-lg-6 mx-auto text-center">
-      <input type="number" class="form-control text-center" id="bud1" placeholder="Enter your budget">
-    </div>
-  </div>
-</div>
-<br>
-<div class="container-fluid text-light">
-  <div class="row">
-    <div class="col-md-6 mx-auto border p-3">
-      <h5>Brand & Discounts</h5>
+      .container{
+          background-color: rgba(250, 250, 250, 0.644);
+      }
+  </style>
       
-      <button class="btn btn-outline-light w-100 mb-2 brand-btn" data-price="31000">Asus Vivobook Go 14 (31000)</button>
-      <button class="btn btn-outline-light w-100 mb-2 brand-btn" data-price="50995">Asus Vivobook S16 (50995)</button>
-      <button class="btn btn-outline-light w-100 mb-2 brand-btn" data-price="64599">Acer Nitro 5 (64599)</button>
-      <button class="btn btn-outline-light w-100 mb-2 brand-btn" data-price="48449">Acer Aspire (48449)</button>
-      <button class="btn btn-outline-light w-100 mb-2 brand-btn" data-price="36510">Lenovo SlimPad Idea3 (36510)</button>
-      <button class="btn btn-outline-light w-100 mb-2 brand-btn" data-price="59154">Lenovo 14" IdeaPad 5 2-in-1 (59154)</button>
+  </head>
+  <body>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid text-center" id="container1">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Locate</a>
+          </li>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="text" placeholder="Search">
+          <button class="btn btn-primary" type="button">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+        <br>
+  <div class="container-fluid text-center text-light" id="T1">
+      <h2>Want a laptop but you're on a budget? 🎮</h2>
+      <h3>Enter your budget and let's find the right one for you!</h3>
+  </div>
+  <br>  
 
-      <div class="footer">
-        <p id="Etext">You are eligible for: 0.00</p>
+      <div class="col-lg-6 mx-auto text-center">
+        <input type="number" class="form-control text-center" id="bud1" placeholder="Enter your budget" oninput="calculate()">
       </div>
     </div>
   </div>
-</div>
-<br>
+  <br>
+<div class="container-fluid text-light">
+  <div class="row">
+    <div class="col-md-6 mx-auto border rounded p-4 shadow">
 
-<div class="text-light">
-  <h5>Store Locations</h5>
-  <p><strong>R-Laptops</strong><br>
-  Cyberzone, SM City Fairview, Main Building<br></p>
+<h5 class="mb-3 text-center">Available Laptop Models</h5>
+  <p class="small text-center">Green highlight means within your budget.</p>
+      
+   <button id="p1" class="btn btn-outline-light w-100 mb-2">
+        Asus Vivobook Go 14 - ₱31,000
+      </button>
+
+   <button id="p2" class="btn btn-outline-light w-100 mb-2">
+        Asus Vivobook S16 - ₱50,995
+      </button>
+
+   <button id="p3" class="btn btn-outline-light w-100 mb-2">
+        Acer Nitro 5 - ₱64,599
+      </button>
+
+  <button id="p4" class="btn btn-outline-light w-100 mb-2">
+       Acer Aspire - ₱48,449
+      </button>
+
+<button id="p5" class="btn btn-outline-light w-100 mb-2">
+    Lenovo SlimPad Idea3 - ₱36,510
+      </button>
+
+      <button id="p6" class="btn btn-outline-light w-100 mb-2">
+        Lenovo IdeaPad 5 2-in-1 - ₱59,154
+      </button>
+
+      <div class="footer mt-3 text-center">
+        <p id="Etext">Enter your budget above to see options.</p>
+      </div>
+
+    </div>
+  </div>
 </div>
 
+  <br>
+
+  <div class="text-light">
+    <h5>Store Locations</h5>
+    <p>R-Laptops
+      <br>
+    Cyberzone, SM City Fairview, Main Building
+    <br>
+  </p>
+  </div>
+
+<script>
+function calculate(){
+
+var num1 = document.getElementById('bud1').value;
+  var budget = Number(num1);
+
+var compare1 = budget >= 31000;
+var compare2 = budget >= 50995;
+var compare3 = budget >= 64599;
+var compare4 = budget >= 48449;
+var compare5 = budget >= 36510;
+var compare6 = budget >= 59154;
+
+  document.getElementById("p1").style.backgroundColor = compare1 ? "green" : "";
+  document.getElementById("p2").style.backgroundColor = compare2 ? "green" : "";
+  document.getElementById("p3").style.backgroundColor = compare3 ? "green" : "";
+  document.getElementById("p4").style.backgroundColor = compare4 ? "green" : "";
+  document.getElementById("p5").style.backgroundColor = compare5 ? "green" : "";
+  document.getElementById("p6").style.backgroundColor = compare6 ? "green" : "";
+
+}
+</script>
 
 </body>
 </html>
